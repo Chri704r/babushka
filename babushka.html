@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="200x200" href="babushka_favicon-02.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="babushka_favicon-02.png">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Lato:wght@300;400;700&family=Oswald:wght@400;600;700&family=Roboto:wght@400;500;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="babushka.css">
+    <title>Bistro Babushka</title>
+</head>
+
+<body>
+
+    <!----------SEKTION SPLASH------>
+    <section id="start">
+        <header id="splash">
+
+
+                <nav id="first_nav">
+                    <img id="logo" src="babushka_logo2.png" alt="logo">
+                    <div id="menuknap">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <div id="navbar" class="hidden">
+                        <div id="link_box">
+                            <a class="link" href="babushka.html#start">Forside</a>
+                            <a class="link" href="babushka.html#menu">Menu</a>
+                            <a class="link" href="babushka.html#kontakt">Reserver bord</a>
+                            <a class="link" href="babushka.html#footer">Kontakt</a>
+                        </div>
+                        <img src="babushka_logo2.png" alt="babushka logo">
+                    </div>
+                </nav>
+
+
+            <img id="splashbillede" src="splash_babushka.png" alt="splashbillede">
+            <h1>Bistro Babushka</h1>
+            <div id="mere">
+                <div id="boks">
+                    <p>Se udvalg</p>
+                </div>
+                <img class="bounce" id="pil" src="pil1.png" alt="pil">
+            </div>
+        </header>
+    </section>
+
+    <!----------SEKTION MENU------>
+    <section id="menu">
+        <h2>Menu</h2>
+        <p id="sorter">Sorter efter:</p>
+
+        <nav id="second_nav">
+           <div id="knapper">
+           <button data-kategori="alle" class="valgt">Alle</button>
+           <button data-kategori="forretter">Forretter</button>
+           <button data-kategori="hovedretter">Hovedretter</button>
+           <button data-kategori="desserter">Desserter</button>
+           <button data-kategori="sideorders">Tilbehør</button>
+           <button data-kategori="drikkevarer">Drikkevarer</button>
+            </div>
+        </nav>
+
+        <h3>Alle retter</h3>
+        <main></main>
+
+
+    </section>
+
+    <!----------SEKTION KONTAKT------>
+    <section id="kontakt">
+        <div id="section_contact">
+            <div class="left_col">
+                <p id="reserver">Reserver et bord</p>
+            </div>
+            <div class="right_col">
+                <form action="">
+                    <div class="form-felt">
+                        <label for="navn">
+                            <p class="overskrift">Navn:*</p>
+                            <input placeholder="fx Tilde Jensen" name="navn" type="text" required>
+                        </label>
+                    </div>
+                    <div class="form-felt">
+                        <label for="telefon">
+                            <p class="overskrift">Telefon:*</p>
+                            <input placeholder="fx 23 45 67 89" name="telefon" type="text" required>
+                        </label>
+                    </div>
+                    <div class="form-felt">
+                        <label for="dato">
+                            <p class="overskrift">Tid og dato:*</p>
+                            <input type="datetime-local" name="dato"required>
+                        </label>
+                    </div>
+                    <div class="form-felt">
+                        <label for="guests">
+                            <p class="overskrift">Antal:*</p>
+                            <input placeholder="Hvor mange deltager?" name="guests" type="number" min="2" max="10" required>
+                        </label>
+                    </div>
+
+                    <div class="besked">
+                        <label for="navn">
+                            <p class="overskrift">Besked (valgfri):</p>
+                            <textarea placeholder="Er der noget vigtigt vi skal vide før din ankomst? allergier eller andet" name="besked" cols="30" rows="7" style="resize: none"></textarea>
+                        </label>
+                    </div>
+                </form>
+                <div id="button2">Reserver</div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="col">
+            <div class="row">
+                <img class="rowimg" src="clock.png" alt="ur">
+                <h5>Åbningstider:</h5>
+            </div>
+            <p>Mandag - torsdag: 11:00-21:00 <br>
+                Fredag: 11:00-23:00 <br>
+                Lørdag: 11:00-22:00 <br>
+                Søndag: LUKKET</p>
+        </div>
+        <div class="col" id="colright">
+            <div class="row">
+                <img class="rowimg" src="point.png" alt="stikkenål">
+                <h5>Kontakt:</h5>
+            </div>
+            <p>Æbeløvej 20 <br>
+                1234 København K <br>
+                Tlf: +45 12 34 56 78</p>
+        </div>
+    </footer>
+
+
+    <!----------TEMPLATE------>
+    <template>
+        <article>
+            <section id="retter">
+                <img class="billede">
+                <h4 class="navn"></h4>
+                <p class="kort_beskrivelse"></p>
+                <p class="pris">Pris: </p>
+            </section>
+        </article>
+    </template>
+
+   <script src="babushka.js"></script>
+
+</body>
+
+</html>

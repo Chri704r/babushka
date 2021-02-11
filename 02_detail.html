@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="200x200" href="babushka_favicon-02.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="babushka_favicon-02.png">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Lato:wght@300;400;700&family=Oswald:wght@400;600;700&family=Roboto:wght@400;500;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <title>Bistro Babushka</title>
+</head>
+
+<body>
+
+    <style>
+        /*------------STYLE BEGYNDER------------------*/
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(food_bg_blur.jpg);
+            background-size: cover;
+        }
+
+        main {
+            background-color: rgb(255, 255, 255, 30%);
+            backdrop-filter: blur(8px);
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 50px;
+            padding-bottom: 100px;
+            width: 80%;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        article {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            margin: 0 auto 0 auto;
+        }
+
+        img {
+            max-width: 90%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button {
+            width: 130px;
+            border-radius: 11px;
+            background-color: #414141;
+            color: #E89A7D;
+            text-align: center;
+            font-size: 15px;
+            padding-bottom: 7px;
+            padding-top: 7px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            border: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            color: #F0D669;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .oplysninger {
+            max-width: 90%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .langbeskrivelse {
+            padding-bottom: 10px;
+        }
+
+        .oprindelse {
+            padding-bottom: 10px;
+        }
+
+        .pris {
+            font-weight: 600;
+            padding-bottom: 40px;
+        }
+
+    </style>
+
+    <!----------HTML BEGYNDER------------>
+
+    <main>
+        <article class="ret">
+            <div class="billederet">
+                <img src="" alt="" class="billede">
+            </div>
+            <div class="oplysninger">
+                <h2 class="navn"></h2>
+                <p class="langbeskrivelse"></p>
+                <p class="oprindelse">Oprindelse: </p>
+                <p class="pris">Pris: </p>
+                <button>Tilbage</button>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        //---------SCRIPT BEGYNDER----------
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+        let person;
+
+        const medieurl = "https://babushka-dd8a.restdb.io/media/";
+        const myHeaders = {
+
+            "x-apikey": "600ec2fb1346a1524ff12de4"
+        }
+
+        console.log("ID", id);
+
+        document.addEventListener("DOMContentLoaded", loadJSON);
+
+        async function loadJSON() {
+            const JSONData = await fetch(`https://babushka-dd8a.restdb.io/rest/menu/${id}`, {
+                headers: myHeaders
+            });
+            ret = await JSONData.json();
+
+            console.log("retter", ret);
+            visPerson(person);
+        }
+
+        function visPerson() {
+            document.querySelector(".billede").src = medieurl + ret.billede;
+            document.querySelector(".navn").innerHTML = ret.navn;
+            document.querySelector(".langbeskrivelse").textContent += ret.langbeskrivelse;
+            document.querySelector(".oprindelse").textContent += ret.oprindelsesregion;
+            document.querySelector(".pris").innerHTML += ret.pris + ",-";
+
+            document.querySelector("button").addEventListener("click", tilbageTilBistro);
+        }
+
+        function tilbageTilBistro() {
+            history.back();
+        }
+
+    </script>
+</body>
+
+</html>

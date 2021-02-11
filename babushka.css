@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f4f4f4;
+}
+
+/*-----------------STYLE AF FØRSTE NAV----------------*/
+
+#first_nav {
+    z-index: 2;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255, 255, 255, 40%);
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    grid-gap: 100px;
+    justify-content: flex-end;
+}
+#first_nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding-right: 35px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+#first_nav a:hover {
+    color: #E89A7D;
+}
+#menuknap {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 2vw;
+    right: 4vw;
+}
+#navbar {
+    display: contents;
+}
+#link_box {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#navbar img {
+    display: none;
+}
+.bar1,
+.bar2,
+.bar3 {
+    width: 32px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+/*---------SPLASH/HEADER----------*/
+
+header {
+    width: 100%;
+}
+h1 {
+    color: #F0D669;
+    font-size: 8.5vw;
+    position: absolute;
+    top: 31vw;
+    left: 22%;
+    font-family: 'Oswald', sans-serif;
+}
+#splash {
+    margin-bottom: 30px;
+    width: 100%;
+}
+#splashbillede {
+    width: 100%;
+    /*max-height: 740px;*/
+}
+#logo {
+    width: 25px;
+    height: 50px;
+    padding-top: 1vw;
+    transform: rotate(-10deg);
+    position: absolute;
+    left: 3vw;
+}
+#mere {
+    position: absolute;
+    top: 44vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#boks {
+    width: 100px;
+    height: 30px;
+    border: solid #d4d4d4 2px;
+}
+#boks p {
+    color: #d4d4d4;
+    text-align: center;
+    margin-top: 6px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+}
+#pil {
+    width: 35px;
+    height: 17.5px;
+    position: relative;
+    top: 1vw;
+    left: 37%;
+}
+
+/*--------------MENU SEKTION--------------*/
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #FFADAD;
+    padding-bottom: 20px;
+    font-family: sans-serif;
+}
+h3 {
+    max-width: 1090px;
+    margin: 0 auto 0 auto;
+    padding-left: 80px;
+    padding-top: 20px;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+}
+h4 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 12px;
+    color: #ceaf48;
+    font-family: 'Lato', sans-serif;
+    margin-top: 3px;
+}
+#knapper {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 15px;
+    padding-left: 80px;
+    padding-right: 80px;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+}
+button {
+    width: 130px;
+    border-radius: 11px;
+    background-color: #414141;
+    color: #E89A7D;
+    text-align: center;
+    font-size: 13px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+}
+button:hover {
+    background-color: #717171;
+}
+#sorter {
+    padding-bottom: 10px;
+    padding-left: 80px;
+    max-width: 1090px;
+    margin: 0 auto 0 auto;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #414141;
+    font-size: 1rem;
+}
+#retter {
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+.kort_beskrivelse {
+    padding: 5px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.pris {
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.billede {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.valgt {
+    background-color: #717171;
+}
+
+/*---------KONTAKT SEKTION----------*/
+
+#kontakt {
+    margin-top: 50px;
+    height: 450px;
+    width: 100%;
+    background-image: url(tomater1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+#section_contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+}
+#reserver {
+    color: white;
+    font-size: 3rem;
+    font-family: 'Lato', sans-serif;
+}
+.overskrift {
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+placeholder {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+input {
+    width: 300px;
+    height: 20px;
+    border: solid grey 1px;
+}
+textarea {
+    width: 300px;
+    height: 120px;
+    border: solid grey 1px;
+}
+.right_col {
+    position: relative;
+    top: 10%;
+}
+.left_col {
+    position: relative;
+    top: 50%;
+}
+.form-felt {
+    margin-bottom: 10px;
+}
+#button2 {
+    width: 100px;
+    height: 20px;
+    border-radius: 20px;
+    margin-left: 30%;
+    border: solid grey 1px;
+    color: #3e3e3e;
+    margin-top: 10px;
+    background-color: white;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*---------FOOTER----------*/
+
+footer {
+    overflow: hidden;
+    border: solid grey 1px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+footer h5 {
+    font-size: 1rem;
+    margin-top: 5px;
+    font-family: 'Lato', sans-serif;
+}
+footer p {
+    font-size: 0.9rem;
+    margin-left: 5px;
+    margin-top: 3px;
+    font-family: 'Lato', sans-serif;
+}
+.col {
+    padding: 10px;
+    margin-left: 15vw;
+    width: 250px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 3px;
+}
+.rowimg {
+    width: 25px;
+    height: 25px;
+}
+
+/*-----------------MOBIL VERSION----------------------*/
+
+@media only screen and (max-width: 700px) {
+    #menuknap {
+        display: inline-block;
+        z-index: 2;
+        margin-top: 8px;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column-reverse;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        background-color: rgb(255, 255, 255, 50%);
+        backdrop-filter: blur(8px);
+        padding-bottom: 450px;
+    }
+    #navbar a {
+        font-size: 20px;
+        padding-top: 50px;
+        color: #454545;
+        direction: rtl;
+        font-size: 1.8rem;
+    }
+    #navbar img {
+        width: 50px;
+        height: 120px;
+        position: absolute;
+        top: 30px;
+        left: 60px;
+        transform: rotate(-10deg);
+        display: inherit;
+    }
+    #link_box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 150px;
+    }
+    #navbar a:hover {
+        color: #E89A7D;
+    }
+    #knapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 4px;
+        padding-left: 25px;
+        padding-right: 15px;
+        max-width: 550px;
+        margin: 0 auto 0 auto;
+    }
+    #button {
+        width: 130px;
+        border-radius: 11px;
+        background-color: #414141;
+        color: #E89A7D;
+        text-align: center;
+        font-size: 17px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+    }
+    .billede {
+        height: 200px;
+    }
+    .right_col {
+        top: -3%;
+    }
+    .left_col {
+        top: 3%;
+    }
+    .form-felt {
+        margin-bottom: 5px;
+    }
+    .col {
+        margin-left: 4vw;
+    }
+}
+
+/*---------Effekter----------*/
+
+.hidden {
+    display: none;
+    transform: scale(0);
+}
+.change .bar1 {
+    transform: rotate(-45deg) translate(-8px, 5px);
+    transform: rotate(-45deg) translate(-8px, 5px);
+    background-color: #454545;
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -7px);
+    transform: rotate(45deg) translate(-8px, -7px);
+    background-color: #454545;
+}
+
+/*-----------Animationer---------*/
+
+.openmenu {
+    animation-name: slide_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+@keyframes slide_kf {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+.closemenu {
+    animation-name: slideout_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+@keyframes slideout_kf {
+    100% {
+        transform-origin: 0% 0%;
+        transform: translateX(100%);
+    }
+    0% {
+        transform-origin: 0% 0%;
+        transform: translateX(0%);
+    }
+}
+.bounce {
+    animation-name: bounce_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+@keyframes bounce_kf {
+    100% {
+        transform: translateY(-3px);
+    }
+    0% {
+        transform: translateY(5px);
+    }
+}
